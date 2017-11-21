@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">VirtusaWeatherApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_search_city">Search City...</string>
+
+    <string name="wa_api_key">85368e1576669a85f8585e034bd62372</string>
+    <string name="wa_base_url">http://api.openweathermap.org/data/2.5/weather?</string>
+    <string name="wa_base_icon_url">http://openweathermap.org/img/w/</string>
+    <string name="wa_cities_json_file_name">cities_list.json</string>
+
+    <string name="text_pressure">Pressure</string>
+    <string name="text_humidity">Humidity</string>
+    <string name="text_min_temp">Min Temp</string>
+    <string name="text_max_temp">Max Temp</string>
+    <string name="text_sea_level">Sea Level</string>
+    <string name="text_ground_level">Ground Level</string>
+</resources>

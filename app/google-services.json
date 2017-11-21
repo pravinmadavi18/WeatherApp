@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "595977865007",
+    "firebase_url": "https://weatherapp-d64e4.firebaseio.com",
+    "project_id": "weatherapp-d64e4",
+    "storage_bucket": "weatherapp-d64e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595977865007:android:ff69f4177d5c68b1",
+        "android_client_info": {
+          "package_name": "com.virtusa.weatherapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595977865007-rtnd9qj19v63lf2ohgcf33usnhhgovid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjJmfeFQ9aOOdmax3kXNyvzDqX5YGULLs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

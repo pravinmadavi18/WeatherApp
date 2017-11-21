@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.virtusa.weatherapp.ui.fragments.WAWeatherFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/weather_side_margin"
+        android:layout_marginRight="@dimen/weather_side_margin">
+
+        <AutoCompleteTextView
+            android:id="@+id/weather_acv_cities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:hint="@string/text_search_city"
+            android:maxLines="1"
+            android:textSize="@dimen/_20sp" />
+
+        <com.virtusa.weatherapp.views.WARelativeLayout
+            android:id="@+id/rl_wa_weather_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_acv_cities"
+            android:background="@color/colorBackground"
+            android:visibility="gone">
+
+            <com.virtusa.weatherapp.views.WATextView
+                android:id="@+id/weather_tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/weather_side_margin"
+                android:layout_marginTop="@dimen/weather_textview_top_margin"
+                android:gravity="center_horizontal"
+                android:textColor="@color/textColorWhite"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold"/>
+
+            <com.virtusa.weatherapp.views.WATextView
+                android:id="@+id/weather_tv_temprature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/weather_side_margin"
+                android:layout_marginTop="@dimen/weather_textview_top_margin"
+                android:layout_toRightOf="@+id/weather_tv_date"
+                android:gravity="center_horizontal"
+                android:textColor="@color/textColorWhite"
+                android:textSize="@dimen/_20sp"
+                android:textStyle="bold" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/image_weather_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/weather_side_margin"
+                android:layout_toRightOf="@+id/weather_tv_temprature"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/_30dp"
+                android:minWidth="@dimen/_30dp" />
+
+            <com.virtusa.weatherapp.views.WATextView
+                android:id="@+id/tv_weather_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_weather_condition"
+                android:layout_margin="@dimen/weather_side_margin"
+                android:layout_marginBottom="@dimen/weather_textview_top_margin"
+                android:layout_marginTop="@dimen/weather_textview_top_margin"
+                android:layout_toRightOf="@+id/weather_tv_temprature"
+                android:gravity="center_horizontal"
+                android:textColor="@color/textColorWhite"
+                android:textSize="@dimen/_18sp" />
+        </com.virtusa.weatherapp.views.WARelativeLayout>
+
+        <include
+            android:id="@+id/rl_wa_weather_details_pressure"
+            layout="@layout/wa_weather_details_row_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_wa_weather_information"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_30dp"/>
+
+        <include
+            android:id="@+id/rl_wa_weather_details_humidity"
+            layout="@layout/wa_weather_details_row_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_wa_weather_details_pressure"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/rl_wa_weather_details_temp_min"
+            layout="@layout/wa_weather_details_row_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_wa_weather_details_humidity"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/rl_wa_weather_details_temp_max"
+            layout="@layout/wa_weather_details_row_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_wa_weather_details_temp_min"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/rl_wa_weather_details_sea_level"
+            layout="@layout/wa_weather_details_row_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_wa_weather_details_temp_max"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/rl_wa_weather_details_ground_level"
+            layout="@layout/wa_weather_details_row_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_wa_weather_details_sea_level"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>
